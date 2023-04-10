@@ -1,0 +1,17 @@
+{
+  "name": "voice_driven_coding_solutions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --watch"
+  },
+  "keywords": [],
+  "author": "Trillium Smith",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "vitest": "^1.4.0"
+  }
+}
+
