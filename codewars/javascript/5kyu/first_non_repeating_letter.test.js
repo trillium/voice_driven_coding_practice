@@ -1,4 +1,5 @@
 import { test, expect } from 'vitest'
+import { firstNonRepeatingLetter } from './first_non_repeating_letter.js'
 
 test('handles simple tests', () => {
   expect(firstNonRepeatingLetter('a')).toBe('a');

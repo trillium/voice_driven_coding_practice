@@ -14,7 +14,7 @@ class ListNode {
   }
 }
 
-function firstNonRepeatingLetter(s) {
+export function firstNonRepeatingLetter(s) {
   // Handle empty string
   if (s.length === 0) {
     return ""
