@@ -1,7 +1,3 @@
-function findEvenIndex(arr) {
-  //Code goes here!
-}
-
 import { test, expect } from 'vitest'
 import { odds } from './odds.js'
 
