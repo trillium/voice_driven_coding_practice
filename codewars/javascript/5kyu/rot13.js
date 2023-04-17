@@ -4,7 +4,6 @@ export function rot13(message){
   const back = "nopqrstuvwxyz"
 
   for (let i = 0; i < front.length; i++) {
-    console.log(front[i], back[i])
     converter[front[i]] = back[i]
     converter[front[i].toUpperCase()] = back[i].toUpperCase()
     converter[back[i]] = front[i]
