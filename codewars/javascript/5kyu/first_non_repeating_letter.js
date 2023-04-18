@@ -17,62 +17,64 @@ class ListNode {
 export function firstNonRepeatingLetter(s) {
   // Handle empty string
   if (s.length === 0) {
-    return ""
+    return "";
   }
-  
-  const lower = s.toLowerCase()
-  let i = 0
-  const tracker = {}
 
-  const head = new ListNode(-1)
-  let prev = head
-  
-  while(i < s.length) {
-    const curr = new ListNode(i, prev)
-    prev.next = curr
-    let char = lower[i]
-    curr.char = char
-    
+  const lower = s.toLowerCase();
+  let i = 0;
+  const tracker = {};
+
+  const head = new ListNode(-1);
+  let prev = head;
+
+  while (i < s.length) {
+    const curr = new ListNode(i, prev);
+    prev.next = curr;
+    let char = lower[i];
+    curr.char = char;
+
     // assign value or "not found"
-    const isDuplicate = tracker[char] || "not found"
-    
+    const isDuplicate = tracker[char] || "not found";
+
     // if 0 then skip this character
     if (isDuplicate === "duplicate") {
-      i++
-      continue
-    
-    // if the duplicate is not found 
-    } else if ( isDuplicate === "not found" ) {
-      // assign char in tracker for current node
-      tracker[char] = curr
-      // assign prev to current
-      prev = curr
-      i++
-      continue
+      i++;
+      continue;
 
-    } else if  ( isDuplicate instanceof ListNode ) {
-    // otherwise attach next and prev to each other
-      const deleteNode = tracker[char]
-      if (curr.char === deleteNode.char && deleteNode.next.index === curr.index) {
-        prev = deleteNode.prev
-        prev.next = null
+      // if the duplicate is not found
+    } else if (isDuplicate === "not found") {
+      // assign char in tracker for current node
+      tracker[char] = curr;
+      // assign prev to current
+      prev = curr;
+      i++;
+      continue;
+    } else if (isDuplicate instanceof ListNode) {
+      // otherwise attach next and prev to each other
+      const deleteNode = tracker[char];
+      if (
+        curr.char === deleteNode.char &&
+        deleteNode.next.index === curr.index
+      ) {
+        prev = deleteNode.prev;
+        prev.next = null;
       } else {
-        const prevNode = deleteNode.prev
-        const nextNode = deleteNode.next
-        prevNode.next = nextNode
-        nextNode.prev = prevNode
-        deleteNode.next = nextNode
+        const prevNode = deleteNode.prev;
+        const nextNode = deleteNode.next;
+        prevNode.next = nextNode;
+        nextNode.prev = prevNode;
+        deleteNode.next = nextNode;
       }
-      tracker[char] = "duplicate"
-      i++
-      continue
+      tracker[char] = "duplicate";
+      i++;
+      continue;
     }
   }
 
   // return the character
-  // handle all repeat characters condition 
+  // handle all repeat characters condition
   if (head.next === null) {
-    return ""
+    return "";
   }
-  return tracker[s[head.next.index]] === "duplicate" ? "" : s[head.next.index]
+  return tracker[s[head.next.index]] === "duplicate" ? "" : s[head.next.index];
 }

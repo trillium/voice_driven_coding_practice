@@ -4,15 +4,15 @@
 // Note: If the number is a multiple of both 3 and 5, only count it once.
 // Courtesy of projecteuler.net (Problem 1)
 
-export function multiples_of_3_or_5(number){
+export function multiples_of_3_or_5(number) {
   if (number <= 3) {
-    return 0
+    return 0;
   }
-  let output = 3
+  let output = 3;
   for (let i = 5; i < number; i++) {
     if (i % 3 === 0 || i % 5 === 0) {
-      output += i
+      output += i;
     }
   }
-  return output
+  return output;
 }
