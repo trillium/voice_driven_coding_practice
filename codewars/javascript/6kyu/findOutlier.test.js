@@ -1,14 +1,14 @@
-import { test, expect } from "vitest";
-import { findOutlier } from "./findOutlier.js";
+import { test, expect } from 'vitest'
+import { findOutlier } from './findOutlier.js'
 
-test("test", () => {
-  expect(findOutlier([0, 1, 2])).toBe(1);
-  expect(findOutlier([1, 2, 3])).toBe(2);
-  expect(findOutlier([2, 6, 8, 10, 3])).toBe(3);
-  expect(findOutlier([0, 0, 3, 0, 0])).toBe(3);
-  expect(findOutlier([1, 1, 0, 1, 1])).toBe(0);
-  expect(findOutlier([2, 6, 8, 10, 3])).toBe(3);
-  expect(findOutlier([2, 6, 8, 200, 700, 1, 84, 10, 4])).toBe(1);
+test('test', () => {
+  expect(findOutlier([0, 1, 2])).toBe(1)
+  expect(findOutlier([1, 2, 3])).toBe(2)
+  expect(findOutlier([2, 6, 8, 10, 3])).toBe(3)
+  expect(findOutlier([0, 0, 3, 0, 0])).toBe(3)
+  expect(findOutlier([1, 1, 0, 1, 1])).toBe(0)
+  expect(findOutlier([2, 6, 8, 10, 3])).toBe(3)
+  expect(findOutlier([2, 6, 8, 200, 700, 1, 84, 10, 4])).toBe(1)
   expect(
     findOutlier([
       -45434789, 127318495, 53598695, -172416669, 173391695, 61616295,
@@ -20,5 +20,5 @@ test("test", () => {
       175586823, -2056217, 1807121, -58597437, 76476739, 192046219, 115304211,
       180909577, 189714327,
     ])
-  ).toBe(-195302406);
-});
+  ).toBe(-195302406)
+})
