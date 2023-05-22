@@ -2,6 +2,14 @@
 
 I've been learning to use Talon Voice, this repo will only have code I've added with while voice coding
 
+## Notes for voice coding as per community review
+- VSCode search links that have appeared in the terminal
+  - please terminal open
+  - can map to direct voice command eg (termianl hunt {phrase})
+- bring green pit to every instance collie dot {!!}
+  - this would select foo.bar in foo.bar(args)
+- try and use the `that` keyword to run commands easier later
+
 ## Software used:
 - Talon Voice
   - [Official Site](https://talonvoice.com/)
