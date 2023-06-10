@@ -1,3 +1,5 @@
+import { ListNode } from '../../utils'
+
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -5,10 +7,6 @@
  *     this.next = (next===undefined ? null : next)
  * }
  */
-export function ListNode(val, next) {
-  this.val = val === undefined ? 0 : val
-  this.next = next === undefined ? null : next
-}
 
 /*
  * You are given the heads of two sorted linked lists list1 and list2.

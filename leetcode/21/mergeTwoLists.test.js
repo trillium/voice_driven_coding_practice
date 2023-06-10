@@ -1,26 +1,7 @@
 import { test, expect } from 'vitest'
-import { mergeTwoLists, ListNode } from './mergeTwoLists.js'
-
-function makeNode(arr) {
-  if (arr.length === 0) return null
-  const head = new ListNode(arr.shift())
-  let curr = head
-  while (arr.length !== 0) {
-    curr.next = new ListNode(arr.shift())
-    curr = curr.next
-  }
-  return head
-}
-
-function makeArr(head) {
-  output = []
-  let curr = head
-  while (curr) {
-    output.push(curr.val)
-    curr = curr.next
-  }
-  return output
-}
+import { mergeTwoLists } from './mergeTwoLists.js'
+import { makeNode, makeArr } from '../../utils/'
+import ListNode from '../../utils/SinglyLinkedList/index.js'
 
 test('handle empty', () => {
   const list1 = []
