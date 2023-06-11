@@ -18,6 +18,4 @@ export function likes(arr) {
   if (arr.length > 3) {
     return `${arr.shift()}, ${arr.shift()} and ${arr.length} others like this`
   }
-
-  return
 }
