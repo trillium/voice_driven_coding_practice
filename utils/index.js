@@ -12,7 +12,7 @@ export function makeNode(arr) {
 }
 
 export function makeArr(head) {
-  output = []
+  const output = []
   let curr = head
   while (curr) {
     output.push(curr.val)
