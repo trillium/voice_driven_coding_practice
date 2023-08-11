@@ -17,3 +17,9 @@ export function reverse(x) {
   if (out > upper || out < lower) return 0
   return out
 }
+
+export function reverseSimpler(x) {
+  const out = Math.abs(x).toString().split('').reverse().join('')
+  if (out >= 2 ** 31 - 1 || out <= -(2 ** 31)) return 0
+  return x > 0 ? out : -out
+}
