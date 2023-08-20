@@ -13,3 +13,7 @@ export function plusOne(digits) {
   if (carry) digits.unshift(1)
   return digits
 }
+
+export function plusOneOneliner(digits) {
+  return (BigInt(digits.join('')) + BigInt(1)).toString().split('')
+}
