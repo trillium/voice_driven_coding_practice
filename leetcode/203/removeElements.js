@@ -1,24 +1,18 @@
 import ListNode from '../../utils/SinglyLinkedList'
-import { makeArr } from '../../utils'
 
 export function removeElements(head, val) {
-  const dummy = new ListNode(-1, head)
-  let curr = dummy.next
+  let dummy = new ListNode(0)
+  dummy.next = head
   let prev = dummy
-
-  while (curr != null) {
-    if (curr.val === val) {
-      prev.next = curr.next
-      curr = curr.next
+  let current = dummy.next
+  while (current) {
+    if (current.val === val) {
+      prev.next = current.next
     } else {
-      prev = curr
-      curr = prev.next
+      prev = current
     }
-  }
 
-  if (!curr && prev.next === val) {
-    prev.next = null
+    current = current.next
   }
-
   return dummy.next
 }
